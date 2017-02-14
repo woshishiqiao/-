@@ -1,0 +1,154 @@
+﻿{
+  "googleplay": {
+    "report": "panda.keyboard.emoji.theme",
+    "link": "https://play.google.com/store/apps/details?id=panda.keyboard.emoji.theme",
+  },
+  "ar": {
+    "cc": "阿拉伯",
+    "text": "أكثر ذكاء وسهل الاستخدام وجميل المنظر.",
+    "button": "قم بتنزيل",
+    "title": "Panda Keyboard"
+  },
+  "da": {
+    "cc": "丹麦语",
+    "text": "Smarter, User-Friendly<br/>and Cool Looking.",
+    "button": "Installer nu",
+    "title": "Panda Keyboard"
+  },
+  "de": {
+    "cc": "德语",
+    "text": "Intelligenter, Benutzerfreundlich,<br/>Cool.",
+    "button": "HERUNTERLADEN",
+    "title": "Panda Keyboard"
+  },
+  "el": {
+    "cc": "希腊语",
+    "text": "Πιο Έξυπνη, Φιλική προς το<br/>Χρήστη και Μοντέρνα Εμφάνιση.",
+    "button": "ΛΗΨΗ",
+    "title": "Panda Keyboard"
+  },
+  "en": {
+    "cc": "英语",
+    "text": "Smarter, User-Friendly<br/>and Cool Looking.",
+    "button": "DOWNLOAD",
+    "title": "Panda Keyboard"
+  },
+  "es": {
+    "cc": "西班牙语",
+    "text": "Más inteligente, fácil de<br/>usar y con aspecto atractivo.",
+    "button": "Descarga gratuita",
+    "title": "Panda Keyboard"
+  },
+  "fa": {
+    "cc": "Persian/波斯语",
+    "text": "هوشمندتر، کاربرپسند و ظاهری زیبا.",
+    "button": "دانلود",
+    "fontsize": "0.8em",
+    "title": "Panda Keyboard"
+  },
+  "fr": {
+    "cc": "法语",
+    "text": "Plus intelligent,<br/>convivial et d'apparence cool.",
+    "button": "TÉLÉCHARGER",
+    "fontsize": "0.8em",
+    "title": "Panda Keyboard"
+  },
+  "id": {
+    "cc": "印尼语",
+    "text": "Lebih Pintar, Bersahabat<br/>Dengan Pengguna dan Penampilan Keren.",
+    "button": "UNDUH",
+    "title": "Panda Keyboard"
+  },
+  "it": {
+    "cc": "意大利",
+    "text": "Più smart, facile<br/>all'uso e stiloso.",
+    "button": "SCARICA",
+    "title": "Panda Keyboard"
+  },
+  "ko": {
+    "cc": "韩语",
+    "text": "더 스마트하고, 사용자 친화적이며<br/>멋진 외관을 갖추고 있습니다.",
+    "button": "다운로드",
+    "title": "Panda Keyboard"
+  },
+  "ms": {
+    "cc": "马来语",
+    "text": "Lebih Pintar, Mesra Pengguna<br/>dan Kelihatan Lebih Sempoi.",
+    "button": "MUAT TURUN",
+    "title": "Panda Keyboard"
+  },
+  "nl": {
+    "cc": "荷兰",
+    "text": "Slimmer, gebruiksvriendelijk<br/>en het ziet er cool uit.",
+    "button": "DOWNLOADEN",
+    "title": "Panda Keyboard"
+  },
+  "pl": {
+    "cc": "波兰",
+    "text": "Sprytniejsza, przyjazna użytkownikowi<br/>i o fajnym wyglądzie.",
+    "button": "POBIERZ",
+    "title": "Panda Keyboard"
+  },
+  "pt": {
+    "cc": "葡萄牙语",
+    "text": "Mais inteligente, fácil<br/>de usar e estiloso.",
+    "button": "BAIXAR",
+    "title": "Panda Keyboard"
+  },
+  "ro": {
+    "cc": "Romanian/罗马尼亚语",
+    "text": "Este mai inteligent,<br/>ușor de folosit și arată grozav.",
+    "button": "DESCĂRCARE",
+    "fontsize": "0.8em",
+    "title": "Panda Keyboard"
+  },
+   "ru": {
+    "cc": "俄语",
+    "text": "Умнее, удобнее в использовании,<br/>круче с виду.",
+    "button": "ЗАГРУЗИТЬ",
+    "fontsize": "0.8em",
+    "title": "Panda Keyboard"
+  },
+  "th": {
+    "cc": "泰语",
+    "text": "ทันสมัยขึ้น ใช้งานง่ายสำหรับผู้ใช้ และมีลุคเจ๋ง ๆ",
+    "button": "ดาวน์โหลด",
+    "title": "Panda Keyboard"
+  },
+  "tr": {
+    "cc": "土耳其语",
+    "text": "Daha Akıllı,<br/>Kullanıcı Dostu ve Havalı Görünüm.",
+    "button": "İNDİR",
+    "title": "Panda Keyboard"
+  },
+  "uk": {
+    "cc": "乌克兰语",
+    "text": "Розумніше, зручніше у використанні,<br/>бучний вигляд.",
+    "button": "ЗАВАНТАЖИТИ",
+    "title": "Panda Keyboard"
+  },
+  "vi": {
+    "cc": "越南语",
+    "text": "Thông minh hơn, Thân thiện với người<br/>dùng và Nhìn vô cùng ấn tượng.",
+    "button": "TẢI",
+    "title": "Panda Keyboard"
+  },
+  "ja": {
+    "cc": "日语",
+    "text": "Tap to get this powerful keyboard",
+    "button": "今すぐインストール",
+    "title": "Panda Keyboard"
+  },
+  "zh": {
+    "cc": "繁体",
+    "text": "快來下載這個全能的鍵盤",
+    "button": "免費下載",
+    "title": "Panda Keyboard"
+  },
+  "zh-cn": {
+    "cc": "简体",
+    "text": "快来下载这个全能的键盘",
+    "button": "免费下载",
+    "title": "Panda Keyboard"
+  }
+}
