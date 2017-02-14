@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv=Content-Type content="textml;charset=UTF-8">
+    <meta name=viewport content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name=apple-mobile-web-app-capable content=yes>
+    <meta name=format-detection content="telephone=no">
+    <title></title>
+    <meta name=copyright content="Copyright (c) cmcm.com">
+    <style>
+    body,
+    p {
+        margin: 0
+    }
+    
+    body,
+    html {
+        height: 100%;
+        overflow: hidden
+    }
+    
+    body {
+        font-family: "open sans", HelveticaRegular, Helvetica, Verdana, Arial, "Microsoft YaHei"
+    }
+    html{font-size: 100%;}
+    .wrap {
+        width: 100%;
+        min-height: 100%;
+        
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+
+        display: none;
+        background: no-repeat center top;
+        background-size: cover
+    }
+    
+    #phoneWrap {
+        width: 100%;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        border: 1px solid red
+    }
+    
+    .phone-main {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        text-align: center;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+    }
+    
+    .phone-main:after {
+        content: "";
+        position: absolute;
+        width: 110%;
+        height: 104%;
+        top: -3%;
+        z-index: 1;
+        left: -5%;
+        display: block;
+    }
+    
+    .works-img {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        position: absolute;
+        transform-origin:100% 100%;
+        transition: all 1s linear;
+    }
+    .works-img:nth-of-type(1){
+        transform-origin: 100% 0%;
+        transform: translateX(0%) rotateY(0deg);
+    }
+    .works-img:nth-of-type(2){
+        transform-origin: 0% 0%;
+        transform: translateX(110%) translateY(5%) rotateY(50deg) scale(0.9);
+    }
+    .works-img:nth-of-type(3){
+        transform-origin: 0% 0%;
+        transform: translateX(200%) translateY(10%) rotateY(100deg) scale(0.8);
+    }
+    .works-img:nth-of-type(4){
+        transform-origin: 0% 0%;
+        transform: translateX(200%) translateY(10%) rotateY(100deg) scale(0.8);
+    }
+    .works-img img {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: middle
+    }
+    
+    .works-main {
+        width: 70%;
+        height: 65%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 11;
+        perspective: 150;
+        -webkit-perspective: 1000;
+        background: #161616;
+    }
+    
+    .slide-item {
+        width: 100%;
+        height: 6px;
+        position: absolute;
+        z-index: 104;
+        bottom: 12%;
+        left: 0;
+        text-align: center
+    }
+    
+    .slide-item i {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 4px;
+        border-radius: 6px;
+        background: url('img/active-dian.png');
+        background-size: 100%;
+    }
+    
+    .slide-item i.active {
+        background: #fff;
+    }
+    
+    .footer {
+        width: 57.9%;
+        position: absolute;
+        left: 21%;
+        bottom: 6%;
+    }
+    
+    .footer p {
+        width: 100%;
+        line-height: 1.375em;
+        padding-bottom: 5px;
+        color: #fff;
+        font-size: 1.2em;
+        text-align: center;
+        overflow: hidden
+    }
+    
+    .install-wrap {
+        width: 100%;
+    }
+    
+    .btn {
+        -webkit-tap-highlight-color: transparent;
+        tap-highlight-color: transparent;
+        display: block;
+        margin: 0 auto;
+        border-radius: 50px;
+        color: #624f48;
+        text-align: center;
+        font-size: 1.25em;
+        text-decoration: none;
+        -moz-transition: background .4s ease-in;
+        -webkit-transition: background .4s ease-in;
+        -ms-transition: background .4s ease-in;
+        transition: background .4s ease-in;
+        position: relative;
+        overflow: hidden;
+        padding: 0.65em;
+        background: url('img/button.png');
+        background-size: 100% 100%;
+        box-shadow: 0px 5px 3px #333;
+
+    }
+    
+    .btn strong {
+        font-weight: 400;
+        word-wrap: break-word;
+    }
+    
+    @-webkit-keyframes light {
+        0% {
+            margin-left: -60px
+        }
+        80% {
+            margin-left: 110%
+        }
+        100% {
+            margin-left: 110%
+        }
+    }
+    
+    @-moz-keyframes light {
+        0% {
+            margin-left: -60px
+        }
+        80% {
+            margin-left: 110%
+        }
+        100% {
+            margin-left: 110%
+        }
+    }
+    
+    @keyframes light {
+        0% {
+            margin-left: -60px
+        }
+        80% {
+            margin-left: 110%
+        }
+        100% {
+            margin-left: 110%
+        }
+    }
+    
+    .btn:hover {
+        color: #fff
+    }
+    
+    #myCanvas {
+        width: 150%;
+        height: 150%;
+        overflow: hidden
+    }
+    
+    #myCanvas img {
+        width: 100%;
+        height: 100%;
+        vertical-align: top
+    }
+    
+    @media(max-height:480px) {
+        .phone-main {
+            border-radius: 10px
+        }
+    }
+    
+    @media(max-height:400px) {
+        .phone-main {
+            border-radius: 8px
+        }
+    }
+    
+    .tips-text {
+        display: block;
+        width: 100%;
+        position: absolute;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        font-size: .6em;
+        color: rgba(0, 0, 0, .3);
+        font-style: normal;
+        text-align: center
+    }
+    .left-box,.right-box{
+        height: 100%;
+        width: 16.11%;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+    }
+    .mobile-box{
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        background: url(img/mobile-box.png) no-repeat center;
+        background-size: auto 100%;
+    }
+    .scroll-box{
+        height: 100%;
+        width: 95%;
+        overflow: hidden;
+        z-index: 111;
+        position: absolute;
+        top: 0;
+        left: 2.5%;
+    }
+    .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}
+    .clearfix{*+height:1%;}
+    @media screen and (min-width: 700px) {
+        html{
+            font-size: 22px;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class=wrap id=wrap>
+        <div class="scroll-box clearfix">
+            <div class=phone-main id=phoneMain>
+                <div class=works-main id=phoneSlide> </div>
+                <div class=slide-item id=phoneSlideItem> <i class=active></i><i></i><i></i><i></i></div>
+                <div class="mobile-box"></div>
+            </div>
+        </div>
+        
+        <div class=footer>
+            <p id=description></p>
+            <div class=install-wrap><a id=installBtn href=javascript:; class=btn><strong></strong></a></div>
+        </div>
+
+        <script>
+        ! function(e, a, t, n, c, o, s) {
+            e.GoogleAnalyticsObject = c, e[c] = e[c] || function() {
+                (e[c].q = e[c].q || []).push(arguments)
+            }, e[c].l = 1 * new Date, o = a.createElement(t), s = a.getElementsByTagName(t)[0], o.async = 1, o.src = n, s.parentNode.insertBefore(o, s)
+        }(window, document, "script", "//www.google-analytics.com/analytics.js", "ga"), ga("create", "UA-74678694-6", "auto"), ga("send", "pageview")
+        </script>
+
+    </div>
+    <script>
+    var phoneSlide = document.querySelector("#phoneSlide");
+    document.querySelector("#phoneSlide").style.marginTop = document.body.clientWidth / 414 *101-1 +"px";
+
+    if( window.screen.height / window.screen.width <= 1.775 ){
+        var appName = navigator.appName,
+                language = "";
+            language = "Netscape" == appName ? navigator.language : navigator.userLanguage;
+            document.querySelector("#installBtn").style.fontSize = "1.1em";
+            document.querySelector("#description").style.fontSize = "1em";
+
+    }
+
+    var interval; 
+    var ahead = -1;
+    var tX = '0%', tY = '5%', rotateY=0, scale=0.9, transformOrigin='';
+    
+    var xishu = 0; 
+    function pageSwitch(e){
+        
+        interval = setInterval(function(){
+            xishu++;
+            ahead++;
+            if(ahead >= 4 ){
+                ahead = 0; 
+            }
+            for(var i=0; i<e.children.length; i++){
+
+
+                if(i==ahead){
+                    e.children[i].classList.add('ahead');
+                }else{
+                    e.children[i].classList.remove('ahead'); 
+                }
+
+                if( i == (ahead + 2)%4 ){    
+                    transformOrigin = "0% 0%";
+                    tX = "110%";
+                    tY = "5%";
+                    rotateY = "50deg";
+                    scale = 0.9;
+                }else if( i == (ahead + 3)%4 ){
+                    transformOrigin = "100% 0%";
+                    tX = "-200%";
+                    tY = "10%";
+                    rotateY = "-100deg";
+                    scale = 0.8;
+                }else if( i == ahead ){
+                    transformOrigin = "100% 0%";
+                    tX = "-110%";
+                    tY = "5%";
+                    rotateY = "-50deg";
+                    scale = 0.9;
+                }else if( i == (ahead + 1)%4 ){
+                    transformOrigin = "0% 0%";
+                    tX = "0%";
+                    tY = "0%";
+                    rotateY = "0deg";
+                    scale = 1;
+                }
+
+                if( xishu == 1 && i == 3 ) continue;
+                e.children[i].style.transition = "all 1s linear";
+                e.children[i].style.transitionDuration = '1s';
+                e.children[i].style.transformOrigin = transformOrigin;
+                e.children[i].style.transform = "translateX("+tX+") translateY("+tY+") rotateY("+rotateY+") scale("+scale+")";
+
+            }
+            setTimeout(function(){
+                    
+                e.children[(ahead + 3)%4].style.transition = "none";
+                e.children[(ahead + 3)%4].style.transform = "translateX(200%) translateY(10%) rotateY(100deg) scale(0.8)";
+
+                var phoneSlideItem = document.querySelector("#phoneSlideItem");
+                for( var m=0; m< phoneSlideItem.children.length; m++){
+                    phoneSlideItem.children[m].className = '';
+                }
+                phoneSlideItem.children[(ahead+1)%4].className = 'active';
+                
+            },1050);
+            
+        },1500);
+        
+    }
+
+    document.addEventListener('visibilitychange',function(){ 
+        if(document.visibilityState=='hidden') { 
+            clearInterval( interval );
+        }else { 
+            var phoneSlide = document.querySelector("#phoneSlide");
+            pageSwitch(phoneSlide); 
+        }
+    },false);
+
+    !function() {
+        "use strict";
+
+        function getUrlParams() {
+            var e = {},
+                t = window.location.href,
+                n = t.indexOf("?");
+            if (n > 0)
+                for (var i, s, r = t.substring(n + 1), a = r.split("&"), o = 0; i = a[o]; o++) s = a[o] = i.split("="), e[s[0]] = s.length > 1 ? s[1] : !0;
+            return e
+        }
+
+        function setMatter(e) {
+            var t = $$("phoneSlide"),
+                n = "",
+                i = $$("wrap");
+            i.style.backgroundImage = "url(img/" + e + "/theme-bgimg.jpg)";
+            for (var s = 4; s--;) {
+                n += '<div class="works-img"><img src="img/' + e + "/launcher_preview" + (4-s) + '.jpg" /></div>';
+            }
+            
+            t.innerHTML = n, $$("wrap").style.display = "block", _ajax({
+                url: "img/" + e + "/" + e + ".json",
+                method: "get",
+                dataType: "json",
+                success: function(e) {
+                    LANGUAGE = e, setLanguageRun.browserLanguage()
+                },
+                error: function(e) {
+                    console.log(e)
+                }
+            })
+
+        }
+
+        function setLanguage() {
+            function e(e) {
+                setTimeout(function() {
+                    try {
+                        if (typeof icon_click_handler != "undefined") {
+                            icon_click_handler.goGp(e);
+                        } else if ("undefined" != typeof cm_web_app && cm_web_app.hasOwnProperty("go2Google")) cm_web_app.go2Google(e);
+                        else if ("undefined" != typeof cm_web_app && cm_web_app.hasOwnProperty("openMarket")) cm_web_app.openMarket(e);
+                        else if ("undefined" != typeof android && android.hasOwnProperty("openMarket")) android.openMarket(e);
+                        else {
+                            var t = (new Date).getTime();
+                            setTimeout(function() {
+                                var t = document.createElement("iframe");
+                                t.src = "market://" + e.replace(/^http.*apps\//, ""), document.body.appendChild(t), document.body.removeChild(t)
+                            }, 0), setTimeout(function() {
+                                var n = (new Date).getTime();
+                                n - t > 500 || "hidden" != document.visibilityState && (location.href = e)
+                            }, 300)
+                        }
+                    } catch (n) {
+                        console.log(n)
+                    }
+                }, 200)
+            }
+            var t = this;
+            t.updateTitle = function(e) {
+                document.title = e;
+                var t = window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i);
+                
+            }, t.getId = function(e) {
+                return "string" == typeof e ? document.getElementById(e) : e
+            }, t.setText = function(e, n, i) {
+                i && "undefined" != i && (t.getId("description").style.fontSize = i), t.getId("description").innerHTML = e || "This theme will look perfect on CM Launcher. Try it now?", t.getId("installBtn").getElementsByTagName("strong")[0].innerHTML = n || "Free Download"
+            }, t.setDomStyle = function() {
+                var e = t.getId("phoneMain");
+                    e.style.width = document.body.clientWidth * (720/1080) + "px";
+                    e.style.height = parseInt( e.style.width )*(1341/720) + "px";
+
+                    if( document.body.clientHeight / document.body.clientWidth < 1.7 ){
+                        var mt = document.body.clientHeight/2 +30; 
+                    }else{
+                         var mt = document.body.clientHeight/2 - 40;
+                    }
+                    e.style.marginTop = -1 * mt - 15 + "px";
+
+            }, t.bindTouch = function() {
+                var e = t.getId("phoneSlide"),
+                    n = e.getElementsByTagName("div");
+                if (n.length > 1) {
+                    if (e) {
+                        pageSwitch(e);
+                    }
+                } else t.getId("phoneSlideItem").style.display = "none"
+            }, t.browserLanguage = function() {
+                var e = document.title;
+                e = "";
+                var n = navigator.appName,
+                    i = "";
+                i = "Netscape" == n ? navigator.language : navigator.userLanguage;
+                var s = i.substr(0, 2);
+                if (t.setText("Download CM Launcher Theme<br />make your phone fashionable.", "Free Download"), t.updateTitle("Coolest Theme!"), LANGUAGE && LANGUAGE[s]) {
+                    var r = LANGUAGE[s];
+                    t.setText(r.text, r.button, r.fontsize), t.updateTitle(r.title)
+                }
+            }, t.statRun = function() {
+                document.addEventListener("click", function() {
+                    ga("send", "event", "ksmobile-launcher", "click", LANGUAGE.googleplay.report + "--" + _Referrer);
+                    var t = LANGUAGE.googleplay.link + "&referrer=" + _Referrer;
+                    e(t)
+                }, !1)
+            }, t.init = function() {
+                t.setDomStyle(), window.onresize = function() {
+                    t.setDomStyle()
+                }, t.browserLanguage(), t.bindTouch(), t.statRun()
+            }
+        }
+        var _ajax = function(obj) {
+                var method = obj.method || "get",
+                    url = obj.url || "",
+                    async = !0,
+                    data = obj.data || {},
+                    dataType = obj.dataType || "",
+                    time = obj.time || 6e4,
+                    callback = obj.callback || "zab" + 1e4 * new Date + Math.round(9e3 * Math.random() + 1e3),
+                    success = obj.success || new Function,
+                    error = obj.error || new Function;
+                if (async = 0 != obj.async, "jsonp" == dataType) {
+                    console.log(1);
+                    var d = window.document,
+                        a = d.createElement("script"),
+                        c = d.getElementsByTagName("script")[0];
+                    a.async = async;
+                    var countTime = setTimeout(function() {
+                        a.parentNode.removeChild(a)
+                    }, time);
+                    !data instanceof Object && console.error("data format error!"), url += /\?/.test(url) ? "&" : "?";
+                    for (var i in data) url += i + "=" + data[i] + "&";
+                    url += "callback=" + callback, a.src = url, c.parentNode.insertBefore(a, c), window[callback] = success, a.onload = function() {
+                        clearTimeout(countTime), setTimeout(function() {
+                            a.remove(), window[callback] = null
+                        }, 1e3)
+                    }
+                } else {
+                    var xhr;
+                    if (window.XMLHttpRequest) xhr = new XMLHttpRequest;
+                    else {
+                        if (!window.ActiveXObject) throw new Error("Ajax is not supported by this browser");
+                        xhr = new ActiveXObject("Msxml2.XMLHTTP")
+                    }
+                    var countTime = setTimeout(function() {
+                        xhr.abort()
+                    }, time);
+                    xhr.onreadystatechange = function() {
+                        if (4 == xhr.readyState)
+                            if (200 == xhr.status) {
+                                clearTimeout(countTime);
+                                var re_data = xhr.responseText;
+                                "json" == dataType && (re_data = eval("(" + xhr.responseText + ")")), success(re_data)
+                            } else clearTimeout(countTime), error(xhr)
+                    }, !data instanceof Object && console.error("data format error!");
+                    var _data = null;
+                    if ("get" == method) {
+                        url += /\?/.test(url) ? "&" : "?";
+                        for (var i in data) url += i + "=" + data[i] + "&"
+                    } else {
+                        _data = new FormData;
+                        for (var i in data) _data.append(i, data[i])
+                    }
+                    xhr.open(method, url, async), xhr.send(_data)
+                }
+            },
+        urlParams = getUrlParams(),
+        _ID = urlParams.id,
+        _Referrer = urlParams.referrer,
+        LANGUAGE = "",
+        $$ = function(e) {
+            return document.getElementById(e)
+        };
+        if (!_ID) return console.error("Don't find id param in url"), !1;
+        setMatter(_ID);
+        var setLanguageRun = new setLanguage;
+        setLanguageRun.init()
+    }()
+
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", function(){
+        var phoneSlide = document.querySelector("#phoneSlide");
+        document.querySelector("#phoneSlide").style.marginTop = document.body.clientWidth / 414 *101-1 +"px";
+
+        if( window.screen.height / window.screen.width < 1.7 ){
+            var phoneMain = document.querySelector("#phoneMain");
+            phoneMain.style.width = document.body.clientWidth * (720/1080) + "px";
+            phoneMain.style.height = parseInt( phoneMain.style.width )*(1341/720) + "px";
+            var mt = document.body.clientHeight/2 + 30;
+            phoneMain.style.marginTop = -1 * mt - 15 + "px";
+        }
+        if( window.screen.height / window.screen.width <= 1.775 ){
+            var appName = navigator.appName,
+                    language = "";
+                language = "Netscape" == appName ? navigator.language : navigator.userLanguage;
+                document.querySelector("#installBtn").style.fontSize = "1.1em";
+                document.querySelector("#description").style.fontSize = "1em";
+        }
+    }, !1)
+    </script>
